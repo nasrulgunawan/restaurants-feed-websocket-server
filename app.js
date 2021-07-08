@@ -1,6 +1,7 @@
 const WebSocket = require('ws')
 
-const wss = new WebSocket.Server({ port: 8080 })
+const port = process.env.PORT || 8080;
+const wss = new WebSocket.Server({ port: port })
 const THRESHOLD = 6400;
 const RESTAURANTS = [{
   "id": "rqdv5juczeskfw1e867",
